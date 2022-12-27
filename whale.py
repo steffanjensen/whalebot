@@ -10,7 +10,7 @@ latest_block = w3.eth.blockNumber
 balances = {}
 
 # Iterate over all of the blocks
-for block_num in range(latest_block):
+for block_num in range(latest_block - 20000, latest_block):
     # Get the block data
     block = w3.eth.getBlock(block_num, full_transactions=True)
     
